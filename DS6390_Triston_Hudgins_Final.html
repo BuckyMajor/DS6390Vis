@@ -2,13 +2,33 @@
 <html>
 
 <head>
-    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="p5.min.js"></script>
 </head>
 
 <body>
 
 <script>
-
+var img;
+ 
+ function preload()
+ {
+   // load image
+   img = loadImage("Universal2020Icon.png");
+ }
+  
+ function setup() 
+ {
+   // set canvas size
+   createCanvas(800, 800); 
+ }
+  
+ function draw() 
+ {
+   background(255);
+  
+   // display image (img, x, y)
+   image(img, 0, 0); 
+ }
 
 </script>
 
