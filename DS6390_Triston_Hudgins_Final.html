@@ -9,26 +9,40 @@
 
 <script>
 var img;
+var angle = 0;
  
  function preload()
  {
    // load image
-   img = loadImage("Universal2020Icon.png");
+   img = loadImage("https://dm2305files.storage.live.com/y4mAJSkac6_1__F7OBj_rkjriCkPQxuC7_QgM72wqPMUpDctr-lNpRePpN04_osUCbCDU7U7KDxcjScTx2ksa5kgR60BiszAqtkezJr1Mt81UKPOljUdcwmWCdQBgiKhMTNi1YRBzo5KU0b-hg5fAc7r9iqqFzhFL2QBX_fFJsRiMj1TwrTGmNTQf4BftIPTPvnaXZC6ood8-9roKt0KxUiCu-qd44BtTqVPFpxu_N2nxk?encodeFailures=1&width=505&height=505");
  }
   
  function setup() 
  {
    // set canvas size
-   createCanvas(800, 800); 
+   createCanvas(windowWidth, windowHeight);
+   angleMode(DEGREES);
+   noLoop(); 
  }
   
  function draw() 
  {
-   background(255);
-  
+   push();
+   background("#565656");
+   translate(windowWidth / 2, windowHeight / 2);
+   rotate(-angle);
+   imageMode(CENTER);
    // display image (img, x, y)
-   image(img, 0, 0); 
+   image(img, 0, 0, 200, 200);
+   if (angle < 1080) {angle+=5;
+   } else {noLoop();
+   }
+   pop(); 
  }
+
+function mouseClicked() {
+  loop();
+}
 
 </script>
 
