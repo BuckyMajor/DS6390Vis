@@ -5,9 +5,29 @@
     <script src="p5.min.js"></script>
 </head>
 
-<body>
+<style>
+.fade-out {
+  animation: fadeOut ease 3s;
+  animation-fill-mode: forwards;
+  animation-delay: 5s;
+}
 
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+</style>
+
+
+<body class="fade-out">
+
+<div>
 <script>
+
 var img;
 var angle = 0;
  
@@ -17,7 +37,8 @@ var angle = 0;
    img = loadImage("https://dm2305files.storage.live.com/y4mAJSkac6_1__F7OBj_rkjriCkPQxuC7_QgM72wqPMUpDctr-lNpRePpN04_osUCbCDU7U7KDxcjScTx2ksa5kgR60BiszAqtkezJr1Mt81UKPOljUdcwmWCdQBgiKhMTNi1YRBzo5KU0b-hg5fAc7r9iqqFzhFL2QBX_fFJsRiMj1TwrTGmNTQf4BftIPTPvnaXZC6ood8-9roKt0KxUiCu-qd44BtTqVPFpxu_N2nxk?encodeFailures=1&width=505&height=505");
    img2 = loadImage("https://dm2305files.storage.live.com/y4mZWQaj7iFQIyoOPk2REznvUS1B3gVwMKH1GvAQT7Wjxbf6fVyDidg6pl-9LybjxScZP68ubEKVvZpVJQTewNIao7DgD2xXzrBbexhhBiJVFz9jm5D9I894OIZ1Ts0Eooh8mrmIt2J4gTrMX7jWtgs4Ru5nss6U1jgymrYxfPELX4NF7QylvCH9Ru-En4qVHWWJ52YwtYOtIxI4ty7o-MVXgoqEKxcggj5mEnLnt6VaA4?encodeFailures=1&width=1920&height=363")
  }
-  
+
+ 
  function setup() 
  {
    // set canvas size
@@ -57,17 +78,23 @@ var angle = 0;
     if (posX2 > 1900 / 5) {posX2+=7.7;
     } else {noLoop();
     }
+    if (posX > 1900 / 5) {loop();
+    } else {noLoop();
+    }
    pop(); 
  }
 
-function mouseClicked() {
-  if (posX > 1900 / 5) {loop();
-    } else {noLoop();
-    }
-}
+// function mouseClicked() {
+
+// }
+
+
 
 </script>
+</div>
 
 </body>
+
+
 
 </html>
