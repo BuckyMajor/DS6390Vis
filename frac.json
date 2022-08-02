@@ -7,8 +7,8 @@
        {
         "name": "Logistics",
         "children": [
-         {"name": "Waiting on Iron", "size": 3938},
-         {"name": "Waiting on Sand", "size": 3812},
+         {"name": "Waiting-Iron", "size": 3938},
+         {"name": "Waiting-Sand", "size": 3812},
         //  {"name": "HierarchicalCluster", "size": 6714},
         //  {"name": "MergeEdge", "size": 743}
         ]
