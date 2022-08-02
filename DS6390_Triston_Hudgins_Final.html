@@ -22,30 +22,42 @@ var angle = 0;
  {
    // set canvas size
    createCanvas(1900, 980);
+   fill("#565656");
    posX = 950;
+   posX2 = 500;
    angleMode(DEGREES);
    noLoop(); 
  }
-  
+   
  function draw() 
  {
-  //  push();
+   push();
    background("#565656");
-   translate(posX, windowHeight / 2);
+   translate(posX2, windowHeight / 2);
+   imageMode(CENTER);
+   image(img2, 0, 0, 1100, 300);
+
+   noStroke();
+   fill("#565656");
+   rect(posX-posX2-1100, -100, 1100, 300);
+   
+  
+   translate(posX-posX2, -20);
    rotate(-angle);
    imageMode(CENTER);
    // display image (img, x, y)
    image(img, 0, 0, 250, 250);
+
     if (angle < 1800) {angle+=10;
     } else {noLoop();
     }
     if (posX > 1900 / 5) {posX-=8;
     } else {noLoop();
     }
-  //  pop(); 
-
-    
-
+    if (posX2 > 1900 / 5) {posX2+=7.7;
+    } else {noLoop();
+    }
+   pop(); 
  }
 
 function mouseClicked() {
